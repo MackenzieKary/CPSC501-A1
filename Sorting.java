@@ -136,22 +136,21 @@ public class Sorting {
 		try {
         	int arrLength = Integer.parseInt(Length);		// Get the length of array determined by user
         	if (arrLength < 1){
-				System.out.println("Need to make array larger");
-				System.exit(0);
+        		throw new IllegalArgumentException("Array size must be larger than 0");
 			}
         } catch (NumberFormatException e) {
         	System.out.println("Array length is not a valid integer");
             System.exit(0);
 		}
+		// Check that a proper type of array is provided (Ascending, Descending, or Random)
 		String order = ord.toLowerCase();
-		if (!"ascending".equals(order) && !"descending".equals(order) && !"random".equals(order)){
-			System.out.println("Please indicate order of array. (Ascending/Descending/Random)");
-			System.exit(0);
+		if (!order.equals("ascending") && !order.equals("descending") && !order.equals("random")){
+			throw new IllegalArgumentException("Please indicate order of array. (Ascending/Descending/Random)");
 		}
+		// Check that a proper type of algorithm is provided (Bubble, Insertion, Merge, or Quick)
 		String algorithm = alg.toLowerCase();
-		if (!"bubble".equals(algorithm) && !"insertion".equals(algorithm) && !"merge".equals(algorithm) && !"quick".equals(algorithm)){
-			System.out.println("Please choose one of the available sorting methods. (Bubble/Insertion/Merge/Quick)");
-			System.exit(0);
+		if (!algorithm.equals("bubble") && !algorithm.equals("insertion") && !algorithm.equals("merge") && !algorithm.equals("quick")){
+			throw new IllegalArgumentException("Please choose one of the available sorting methods. (Bubble/Insertion/Merge/Quick)");
 		}
 		
 	}
