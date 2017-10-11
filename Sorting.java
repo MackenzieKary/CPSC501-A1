@@ -24,94 +24,94 @@ public class Sorting {
 		if (order.equals("ascending")){
 			arr = ascendingArray(arr);
 			if(algorithm.equals("bubble")){
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				bubbleSort(arr);
-				long eT = System.nanoTime();
-				long totT = eT - sT; 
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime; 
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}
 			else if (algorithm.equals("insertion")){
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				insertionSort(arr);
-				long eT = System.nanoTime();
-				long totT = eT - sT;
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime;
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}
 			else if (algorithm.equals("merge")){
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				mergeSort(arr);
-				long eT = System.nanoTime();
-				long totT = eT - sT;
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime;
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}
 			else {
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				quickSort(arr, 0, arrLength-1);
-				long eT = System.nanoTime();
-				long totT = eT - sT;
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime;
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}		
 		}
 		if (order.equals("descending")){
 			arr = descendingArray(arr);
 			if(algorithm.equals("bubble")){
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				bubbleSort(arr);
-				long eT = System.nanoTime();
-				long totT = eT - sT; 
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime; 
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}
 			else if (algorithm.equals("insertion")){
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				insertionSort(arr);
-				long eT = System.nanoTime();
-				long totT = eT - sT; 
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime; 
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}
 			else if (algorithm.equals("merge")){
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				mergeSort(arr);
-				long eT = System.nanoTime();
-				long totT = eT - sT; 
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime; 
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}
 			else {
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				quickSort(arr, 0, arrLength-1);
-				long eT = System.nanoTime();
-				long totT = eT - sT; 
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime; 
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}		
 		}
 		if (order.equals("random")){
 			arr = randomArray(arr);
 			if(algorithm.equals("bubble")){
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				bubbleSort(arr);
-				long eT = System.nanoTime();
-				long totT = eT - sT; 
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime; 
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}
 			else if (algorithm.equals("insertion")){
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				insertionSort(arr);
-				long eT = System.nanoTime();
-				long totT = eT - sT; 
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime; 
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}
 			else if (algorithm.equals("merge")){
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				mergeSort(arr);
-				long eT = System.nanoTime();
-				long totT = eT - sT; 
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime; 
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}
 			else {
-				long sT = System.nanoTime();
+				long startTime = System.nanoTime();
 				quickSort(arr, 0, arrLength-1);
-				long eT = System.nanoTime();
-				long totT = eT - sT; 
-				System.out.println("Time to sort: " + totT + " nanoseconds");
+				long endTime = System.nanoTime();
+				long totalTime = endTime - startTime; 
+				System.out.println("Time to sort: " + totalTime + " nanoseconds");
 			}
 		}
 		printOut(arr, outputFile);
