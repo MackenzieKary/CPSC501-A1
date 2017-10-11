@@ -22,98 +22,37 @@ public class Sorting {
 		int[] arr = new int[arrLength]; 
 	
 		if (order.equals("ascending")){
-			arr = ascendingArray(arr);
-			if(algorithm.equals("bubble")){
-				long startTime = System.nanoTime();
-				bubbleSort(arr);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime; 
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}
-			else if (algorithm.equals("insertion")){
-				long startTime = System.nanoTime();
-				insertionSort(arr);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime;
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}
-			else if (algorithm.equals("merge")){
-				long startTime = System.nanoTime();
-				mergeSort(arr);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime;
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}
-			else {
-				long startTime = System.nanoTime();
-				quickSort(arr, 0, arrLength-1);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime;
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}		
+			arr = ascendingArray(arr);				
 		}
-		if (order.equals("descending")){
-			arr = descendingArray(arr);
-			if(algorithm.equals("bubble")){
-				long startTime = System.nanoTime();
-				bubbleSort(arr);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime; 
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}
-			else if (algorithm.equals("insertion")){
-				long startTime = System.nanoTime();
-				insertionSort(arr);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime; 
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}
-			else if (algorithm.equals("merge")){
-				long startTime = System.nanoTime();
-				mergeSort(arr);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime; 
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}
-			else {
-				long startTime = System.nanoTime();
-				quickSort(arr, 0, arrLength-1);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime; 
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}		
+		else if (order.equals("descending")){
+			arr = descendingArray(arr);	
 		}
-		if (order.equals("random")){
+		else if (order.equals("random")){
 			arr = randomArray(arr);
-			if(algorithm.equals("bubble")){
-				long startTime = System.nanoTime();
-				bubbleSort(arr);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime; 
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}
-			else if (algorithm.equals("insertion")){
-				long startTime = System.nanoTime();
-				insertionSort(arr);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime; 
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}
-			else if (algorithm.equals("merge")){
-				long startTime = System.nanoTime();
-				mergeSort(arr);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime; 
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}
-			else {
-				long startTime = System.nanoTime();
-				quickSort(arr, 0, arrLength-1);
-				long endTime = System.nanoTime();
-				long totalTime = endTime - startTime; 
-				System.out.println("Time to sort: " + totalTime + " nanoseconds");
-			}
 		}
+		executeSort(arr, algorithm, outputFile);
+	}
+	
+	public static void executeSort(int[] arr, String algorithm, String outputFile){
+		long startTime = System.nanoTime();
+		
+		if(algorithm.equals("bubble")){
+			bubbleSort(arr);
+		}
+		else if (algorithm.equals("insertion")){
+			insertionSort(arr);
+		}
+		else if (algorithm.equals("merge")){
+			mergeSort(arr);
+		}
+		else if (algorithm.equals("quick")){
+			quickSort(arr, 0, arr.length-1);
+		}
+		
+		long endTime = System.nanoTime();
+		long totalTime = endTime - startTime;
+		System.out.println("Time to sort: " + totalTime + " nanoseconds");
+		
 		printOut(arr, outputFile);
 	}
 	// Method to print out the sorted array into a text file
