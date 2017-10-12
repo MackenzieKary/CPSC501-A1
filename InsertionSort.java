@@ -4,7 +4,7 @@ public class InsertionSort {
 	public InsertionSort() {
 		// Initialize algorithm if necessary
 	}
-		
+	
 	public int[] executeInsertionSort(int[] arr){
     	for (int i = 1, j; i < arr.length; i++){
     		int tmp = arr[i];			//Put number out
@@ -14,5 +14,4 @@ public class InsertionSort {
     	} 
     	return arr;
     }
-
 }

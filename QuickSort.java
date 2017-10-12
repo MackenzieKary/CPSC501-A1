@@ -2,8 +2,9 @@
 public class QuickSort {
 
 	public QuickSort() {
-		// TODO Auto-generated constructor stub
+		// Initialize algorithm if necessary
 	}
+	
 	// *** NOTE *** Quick Sort, partition, and swap code is from WEB. URL = http://codereview.stackexchange.com/questions/4022/java-implementation-of-quick-sort  (w/some alterations)
 	public int[] executeQuickSort(int[] arr, int p, int arrLength){
         if(p<arrLength)
@@ -14,6 +15,7 @@ public class QuickSort {
         }
 		return arr;
     }
+	
     private static int partition(int[] a, int p, int r) {
 
         int x = a[p];
@@ -33,6 +35,7 @@ public class QuickSort {
                 return j;
         }
     }
+    
 	private static void swap(int[] a, int i, int j) {
         // TODO Auto-generated method stub
         int temp = a[i];

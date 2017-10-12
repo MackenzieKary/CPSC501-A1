@@ -2,8 +2,9 @@
 public class MergeSort {
 
 	public MergeSort() {
-		// TODO Auto-generated constructor stub
+		// Initialize algorithm if necessary
 	}
+	
 	// *** NOTE *** Merge Sort, leftHalf, and rightHalf code is from WEB. URL = http://www.buildingjavaprograms.com/code_files/3ed/ch13/MergeSort.java
 	public int[] executeMergeSort(int[] arr){
         if (arr.length > 1) {
@@ -19,20 +20,20 @@ public class MergeSort {
             merge(arr, left, right);
         }
 		return arr;
-    }
-    
+    }  
+	
     // Returns the first half of the given array.
-    public static int[] leftHalf(int[] arr) {
+    private static int[] leftHalf(int[] arr) {
         int size1 = arr.length / 2;
         int[] left = new int[size1];
         for (int i = 0; i < size1; i++) {
             left[i] = arr[i];
         }
         return left;
-    }
+    }  
     
     // Returns the second half of the given array.
-    public static int[] rightHalf(int[] arr) {
+    private static int[] rightHalf(int[] arr) {
         int size1 = arr.length / 2;
         int size2 = arr.length - size1;
         int[] right = new int[size2];
@@ -40,9 +41,9 @@ public class MergeSort {
             right[i] = arr[i + size1];
         }
         return right;
-    }
+    } 
     
-    public static void merge(int[] result, 
+    private static void merge(int[] result, 
                              int[] left, int[] right) {
         int i1 = 0;   // index into left array
         int i2 = 0;   // index into right array

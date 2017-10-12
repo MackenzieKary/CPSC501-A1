@@ -29,8 +29,7 @@ public class Sorting {
 		}
 		executeSort(arr, algorithm, outputFile);
 	}
-	
-	public static void executeSort(int[] arr, String algorithm, String outputFile){
+	private static void executeSort(int[] arr, String algorithm, String outputFile){
 		long startTime = System.nanoTime();
 		
 		if(algorithm.equals("bubble")){
@@ -54,10 +53,12 @@ public class Sorting {
 		long totalTime = endTime - startTime;
 		System.out.printf("\nTime to sort: " + totalTime + " nanoseconds, using %s sort.", algorithm);
 		
+		// Print resulting sorted array to an output file
 		printOut(arr, outputFile);
 	}
+	
 	// Method to print out the sorted array into a text file
-	public static void printOut(int[] arr, String fileName){
+	private static void printOut(int[] arr, String fileName){
 		try {
 			BufferedWriter pOut = new BufferedWriter(new FileWriter(fileName + ".txt"));
 			for (int i = 0; i < arr.length; i++){
@@ -69,10 +70,8 @@ public class Sorting {
 		}
 	}
 	
-	
-
 	// Method to check command line arguments for errors which could crash the program. 
-	public static void error(String ord, String Length, String alg){
+	private static void error(String ord, String Length, String alg){
 		try {
         	int arrLength = Integer.parseInt(Length);		// Get the length of array determined by user
         	if (arrLength < 1){
@@ -95,23 +94,22 @@ public class Sorting {
 		
 	}
 	
-	
 	// Create an initial ascending array
-	public static int[] ascendingArray(int[] arr){
+	private static int[] ascendingArray(int[] arr){
 		for (int i = 0; i < arr.length; i++){
 			arr[i] = i + 1;
 		}
 		return arr;
 	}	
 	// Create an initial descending array
-	public static int[] descendingArray(int[] arr){
+	private static int[] descendingArray(int[] arr){
 		for (int i = 0; i < arr.length; i++){
 			arr[i] = arr.length - i;
 		}
 		return arr;
 	}
 	// Create an initial random array
-	public static int[] randomArray(int[] arr){
+	private static int[] randomArray(int[] arr){
 		Random rand = new Random();
 		for (int i = 0; i < arr.length; i++){
 			arr[i] = rand.nextInt();
