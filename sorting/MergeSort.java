@@ -1,3 +1,4 @@
+package sorting;
 
 public class MergeSort {
 
@@ -6,7 +7,7 @@ public class MergeSort {
 	}
 	
 	// *** NOTE *** Merge Sort, leftHalf, and rightHalf code is from WEB. URL = http://www.buildingjavaprograms.com/code_files/3ed/ch13/MergeSort.java
-	public int[] executeMergeSort(int[] arr){
+	protected int[] executeMergeSort(int[] arr){
         if (arr.length > 1) {
             // split array into two halves
             int[] left = leftHalf(arr);

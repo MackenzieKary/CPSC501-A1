@@ -1,3 +1,4 @@
+package sorting;
 
 import java.util.Random; 
 import java.io.BufferedWriter;
@@ -90,26 +91,25 @@ public class Sorting {
 		String algorithm = alg.toLowerCase();
 		if (!algorithm.equals("bubble") && !algorithm.equals("insertion") && !algorithm.equals("merge") && !algorithm.equals("quick")){
 			throw new IllegalArgumentException("Please choose one of the available sorting methods. (Bubble/Insertion/Merge/Quick)");
-		}
-		
+		}	
 	}
 	
 	// Create an initial ascending array
-	private static int[] ascendingArray(int[] arr){
+	protected static int[] ascendingArray(int[] arr){
 		for (int i = 0; i < arr.length; i++){
 			arr[i] = i + 1;
 		}
 		return arr;
 	}	
 	// Create an initial descending array
-	private static int[] descendingArray(int[] arr){
+	protected static int[] descendingArray(int[] arr){
 		for (int i = 0; i < arr.length; i++){
 			arr[i] = arr.length - i;
 		}
 		return arr;
 	}
 	// Create an initial random array
-	private static int[] randomArray(int[] arr){
+	protected static int[] randomArray(int[] arr){
 		Random rand = new Random();
 		for (int i = 0; i < arr.length; i++){
 			arr[i] = rand.nextInt();

@@ -1,3 +1,4 @@
+package sorting;
 
 public class QuickSort {
 
@@ -6,7 +7,7 @@ public class QuickSort {
 	}
 	
 	// *** NOTE *** Quick Sort, partition, and swap code is from WEB. URL = http://codereview.stackexchange.com/questions/4022/java-implementation-of-quick-sort  (w/some alterations)
-	public int[] executeQuickSort(int[] arr, int p, int arrLength){
+	protected int[] executeQuickSort(int[] arr, int p, int arrLength){
         if(p<arrLength)
         {
             int q=partition(arr,p,arrLength);

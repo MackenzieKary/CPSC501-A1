@@ -1,3 +1,4 @@
+package sorting;
 
 public class InsertionSort {
 
@@ -5,7 +6,7 @@ public class InsertionSort {
 		// Initialize algorithm if necessary
 	}
 	
-	public int[] executeInsertionSort(int[] arr){
+	protected int[] executeInsertionSort(int[] arr){
     	for (int i = 1, j; i < arr.length; i++){
     		int tmp = arr[i];			//Put number out
     		for (j = i; j > 0 && tmp < arr[j-1]; j--)
