@@ -72,7 +72,7 @@ public class Sorting {
 	}
 	
 	// Method to check command line arguments for errors which could crash the program. 
-	private static void error(String ord, String Length, String alg){
+	protected static void error(String ord, String Length, String alg){
 		try {
         	int arrLength = Integer.parseInt(Length);		// Get the length of array determined by user
         	if (arrLength < 1){
